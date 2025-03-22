@@ -5,9 +5,10 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "workspaceship007"
-    key    = "terraform.tfstate"
-    region = "us-east-1"
+    bucket         = "workspaceship007"
+    key            = "terraform.tfstate"
+    region         = "us-east-1"
+    # dynamodb_table = "dynamodb_state_locking"
   }
 }
 
@@ -17,7 +18,7 @@ resource "aws_vpc" "default" {
   enable_dns_hostnames = true
   tags = {
     Name  = "${var.vpc_name}"
-    Owner = "Saikiran"
+    Owner = "Jayesh"
   }
 }
 
