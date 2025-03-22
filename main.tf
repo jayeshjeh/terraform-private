@@ -8,7 +8,7 @@ terraform {
     bucket         = "workspaceship007"
     key            = "terraform.tfstate"
     region         = "us-east-1"
-    # dynamodb_table = "dynamodb_state_locking"
+    dynamodb_table = "dynamodb_state_locking"
   }
 }
 
